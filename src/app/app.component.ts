@@ -18,15 +18,7 @@ export class AppComponent implements OnInit, OnDestroy{
   ){}
 
   ngOnInit() {
-    this.subscription = this.dataStorageService.getPosts().subscribe(
-      (response:Response) => {
-        const posts = response.json();
-        this.posts = posts;
-      },
-      (error:Response) => {
-        console.log('Error getting posts.');
-      }
-    )
+    
   }
 
   ngOnDestroy() {
