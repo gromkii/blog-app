@@ -22,6 +22,7 @@ export class BlogComponent implements OnInit {
     this.subscription = this.dataStorageService.getPosts().subscribe(
       (response:Response) => {
         const posts = response.json();
+        console.log(posts);
         this.posts = posts;
       },
       (error:Response) => {
